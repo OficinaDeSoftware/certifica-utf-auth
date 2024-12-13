@@ -1,5 +1,4 @@
-# EmissorCertificadosBackend
-Projeto de oficina de software voltado para emissão de certificados de maneira online.
+# Certifica UTF Auth
 
 ## Scripts nescessários
 
