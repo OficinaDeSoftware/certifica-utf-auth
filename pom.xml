@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.OficinaDeSoftware</groupId>
-	<artifactId>CertificaUtfAuth</artifactId>
+	<artifactId>certifica-utf-auth</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>CertificaUtfAuth</name>
+	<name>certifica-utf-auth</name>
 	<description>Auth validator</description>
 	<properties>
 		<java.version>17</java.version>
