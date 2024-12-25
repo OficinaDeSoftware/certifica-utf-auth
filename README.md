@@ -1,6 +1,6 @@
 # Certifica UTF Auth
 
-`Projeto voltado a autenticação, hoje possui dois providers, google e seacoes ( Utiliza o registro acadêmico ), com base nos dados do usuário fornecido válida se já existe um usuário cadastrado, se não existir cadastra o usuário automaticamente. Não armazenamos nenhum dado sensível como senha, apenas e-mail e RA para identificação do usuário, dados adicionais necessários sempre são requisitados aos providers.`
+`Projeto voltado a autenticação, hoje possui dois providers, google e siacoes ( Utiliza o registro acadêmico ), com base nos dados do usuário fornecido válida se já existe um usuário cadastrado, se não existir cadastra o usuário automaticamente. Não armazenamos nenhum dado sensível como senha, apenas e-mail e RA para identificação do usuário, dados adicionais necessários sempre são requisitados aos providers.`
 
 ## Variaveis de ambiente
 
