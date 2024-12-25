@@ -1,25 +1,17 @@
-# EmissorCertificadosBackend
-Projeto de oficina de software voltado para emissão de certificados de maneira online.
+# Certifica UTF Auth
 
-## Scripts nescessários
+`Projeto voltado a autenticação, hoje possui dois providers, google e seacoes ( Utiliza o registro acadêmico ), com base nos dados do usuário fornecido válida se já existe um usuário cadastrado, se não existir cadastra o usuário automaticamente. Não armazenamos nenhum dado sensível como senha, apenas e-mail e RA para identificação do usuário, dados adicionais necessários sempre são requisitados aos providers.`
 
-No repositório do seu projeto, você pode executar:
+## Variaveis de ambiente
 
-### `mvnw clean install`
+|Variavel| Descrição                                                                    |
+|:-|:-----------------------------------------------------------------------------|
+|`GOOGLE_CLIENT_ID`| **Obrigatório**. Client ID utilizado para integração com o google oauth      |
+|`MONGO_URL`| **Obrigatório**. URL do mongoDB atlas                                        |
+|`TOKEN_SECURITY_JWT`| **Obrigatório**. Palavra utilizada para assinar o JTW                        |
+|`UTFPR_BASEURL`| **Obrigatório**. Host do Seacoes para login com o sistema acadêmico da UTFPR |
 
-Limpa todas as dependências e baixa elas novamente, e compila o código.\
-Além de gerar a pasta "target" com o artefato do projeto.
+## Fluxograma
 
-Utilizado na hora que termina de clonar o projeto do git ou quando teve altração nas dependências.
+![CertificaUTFAuth](documentation/image/certifica-utf-auth.png)
 
-### `mvnw compile`
-
-Apenas compila o código.
-
-Utilizado quando a alteação apenas no código e não nas dependências. 
-
-### `mvnw spring-boot:run`
-
-Roda a aplicação.
-
-Deve ser utilizado de pois de ter executado o camando "mvnw compile" ou "mvnw clean install"
