@@ -9,7 +9,7 @@
 |`GOOGLE_CLIENT_ID`| **Obrigatório**. Client ID utilizado para integração com o google oauth      |
 |`MONGO_URL`| **Obrigatório**. URL do mongoDB atlas                                        |
 |`TOKEN_SECURITY_JWT`| **Obrigatório**. Palavra utilizada para assinar o JTW                        |
-|`UTFPR_BASEURL`| **Obrigatório**. Host do Seacoes para login com o sistema acadêmico da UTFPR |
+|`UTFPR_BASEURL`| **Obrigatório**. Host do siacoes para login com o sistema acadêmico da UTFPR |
 
 ## Fluxograma
 
