@@ -2,9 +2,9 @@ package com.OficinaDeSoftware.Auth.service.auth;
 
 import java.util.List;
 
+import com.OficinaDeSoftware.Auth.producer.EmailProducer;
 import com.OficinaDeSoftware.Auth.service.auth.Provider.ProviderTokenServiceFactory;
 import com.OficinaDeSoftware.Auth.service.exception.UnknowProviderTokenException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.OficinaDeSoftware.Auth.converter.UserConverter;
@@ -19,16 +19,20 @@ import com.OficinaDeSoftware.Auth.service.auth.Provider.ProviderTokenService;
 @Service
 public class AuthenticationService {
 
-    @Autowired
-    private UserService userService;
-
-    @Autowired
-    private UserConverter userConverter;
-
+    private final UserService userService;
+    private final UserConverter userConverter;
+    private final EmailProducer emailProducer;
     private final ProviderTokenServiceFactory providerTokenServiceFactory;
 
-    public AuthenticationService( ProviderTokenServiceFactory providerTokenServiceFactory ){
+    public AuthenticationService(
+            ProviderTokenServiceFactory providerTokenServiceFactory,
+            UserConverter userConverter,
+            UserService userService,
+            EmailProducer emailProducer ){
         this.providerTokenServiceFactory = providerTokenServiceFactory;
+        this.userConverter = userConverter;
+        this.userService = userService;
+        this.emailProducer = emailProducer;
     }
     
     public UserDto authenticate( CredentialsDto credentialsDto ) throws RuntimeException {
@@ -55,6 +59,8 @@ public class AuthenticationService {
         UserDto userDto = userConverter.convertToDto( provider );
         userDto.setRoles( List.of( RoleEnum.ROLE_USER ) );
         userService.save( userDto );
+
+        emailProducer.register( userDto );
 
         return userDto;
     }
