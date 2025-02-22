@@ -10,6 +10,8 @@
 |`MONGO_URL`| **Obrigatório**. URL do mongoDB atlas                                        |
 |`TOKEN_SECURITY_JWT`| **Obrigatório**. Palavra utilizada para assinar o JTW                        |
 |`UTFPR_BASEURL`| **Obrigatório**. Host do siacoes para login com o sistema acadêmico da UTFPR |
+| `RABITMQ_ADDRESS`    | URL dos servidores RabbitMQ             | `amqps://user:password@rabbitmq.example.com/vhost` |
+| `BROKER_EMAIL`       | E-mail padrão do broker                 | `default.email` |
 
 ## Fluxograma
 
